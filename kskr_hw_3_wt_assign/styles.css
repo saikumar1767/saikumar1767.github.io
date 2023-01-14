@@ -4,10 +4,10 @@
 }
 
 h1{
-    font-size: 60px;
+    font-size: 56px;
     margin: 0px;
-    padding: 16px;
-    padding-bottom: 10px;
+    padding: 18px;
+    padding-bottom: 8px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
 }
@@ -23,6 +23,8 @@ h1{
 #categories a {
     display: inline-block;
     padding-right: 20px;
+    font-style: italic;
+    font-size: 14px;
 }
 
 #content-body {
@@ -37,25 +39,28 @@ h1{
 }
 
 #nature-title {
-    margin-left: 365px;
-    margin-top: 75px;
+    margin-left: 118px;
+    margin-top: 50px;
     margin-bottom: 8px;
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    width: 580px;
+    text-align: center;
 }
 
 #footer {
     margin-top: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
     text-align: center;
     margin-left: 415px;
     width: 665px;
 }
 
-.trademarks {
-    margin-top: 30px;
+#trademarks {
+    margin-top: 28px;
     text-align: center;
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 408px;
     width: 665px;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -67,7 +72,7 @@ h1{
 
 a {
     text-decoration: none;
-    color: gray;
+    color: #6f706b;
     opacity: 0.8;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
