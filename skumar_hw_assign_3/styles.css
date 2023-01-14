@@ -43,14 +43,12 @@ h1{
 #footer {
     margin-top: 24px;
     margin-bottom: 30px;
-    margin-left: 690px;
-    width: 160px;
+    text-align: center;
 }
 
 .trademarks {
     margin-top: 30px;
-    margin-left: 690px;
-    width: 160px;
+    text-align: center;
     font-size: 12px;
 }
 
