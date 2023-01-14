@@ -4,7 +4,7 @@
 }
 
 h1{
-    font-size: 50px;
+    font-size: 60px;
     margin: 0px;
     padding: 16px;
     padding-bottom: 10px;
@@ -38,6 +38,7 @@ h1{
     margin-left: 365px;
     margin-top: 75px;
     margin-bottom: 8px;
+    font-size: 28px;
 }
 
 #footer {
@@ -62,10 +63,11 @@ h1{
 
 a {
     text-decoration: none;
-    color: black;
-    opacity: 0.6;
+    color: gray;
+    opacity: 0.8;
+    font-weight: bold;
 }
 
 #categories > p {
-    opacity: 0.6;
+    opacity: 0.8;
 }
