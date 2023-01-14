@@ -44,12 +44,16 @@ h1{
     margin-top: 24px;
     margin-bottom: 30px;
     text-align: center;
+    margin-left: 408px;
+    width: 665px;
 }
 
 .trademarks {
     margin-top: 30px;
     text-align: center;
     font-size: 12px;
+    margin-left: 408px;
+    width: 665px;
 }
 
 #footer > img {
