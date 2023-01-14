@@ -1,0 +1,69 @@
+#header {
+    padding-top: 30px;
+    width: 1200px;
+}
+
+h1{
+    font-size: 50px;
+    margin: 0px;
+    padding: 16px;
+    padding-bottom: 10px;
+}
+
+#container-head {
+    border: 2px solid black;
+    text-align: center;
+    margin-left: 408px;
+    width: 665px;
+    padding-bottom: 20px;
+}
+
+#categories a {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+#content-body {
+    margin-left: 365px;
+    width: 900px;
+}
+
+#content-body > img {
+    margin-right: 4px;
+    margin-bottom: 4px;
+    object-fit: cover;
+}
+
+#nature-title {
+    margin-left: 365px;
+    margin-top: 75px;
+    margin-bottom: 8px;
+}
+
+#footer {
+    margin-top: 24px;
+    margin-bottom: 30px;
+    margin-left: 690px;
+    width: 160px;
+}
+
+.trademarks {
+    margin-top: 30px;
+    margin-left: 690px;
+    width: 160px;
+    font-size: 12px;
+}
+
+#footer > img {
+    padding-right: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    opacity: 0.6;
+}
+
+#categories > p {
+    opacity: 0.6;
+}
