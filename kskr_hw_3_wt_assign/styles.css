@@ -1,6 +1,12 @@
+#hw_3 {
+    width: 762px;
+    margin: auto;
+}
+
 #header {
     padding-top: 30px;
-    width: 1200px;
+    width: 762px;
+    margin: auto;
 }
 
 h1{
@@ -15,9 +21,10 @@ h1{
 #container-head {
     border: 2px solid black;
     text-align: center;
-    margin-left: 408px;
+    /* margin-left: 408px; */
     width: 665px;
     padding-bottom: 20px;
+    margin: auto;
 }
 
 a:last-child {
@@ -32,8 +39,7 @@ a:last-child {
 }
 
 #content-body {
-    margin-left: 365px;
-    width: 900px;
+    width: 762px;
 }
 
 #content-body > img {
@@ -43,35 +49,36 @@ a:last-child {
 }
 
 #nature-title {
-    margin-left: 118px;
     margin-top: 50px;
     margin-bottom: 8px;
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 550;
-    width: 580px;
-    text-align: center;
+    width: 762px;
+    text-align: left;
 }
 
 #footer {
     margin-top: 24px;
     margin-bottom: 28px;
     text-align: center;
-    margin-left: 415px;
-    width: 665px;
+    width: 762px;
 }
 
 #trademarks {
     margin-top: 28px;
     text-align: center;
     font-size: 10px;
-    margin-left: 408px;
-    width: 665px;
+    width: 762px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #footer > img {
     padding-right: 16px;
+}
+
+#footer > img:last-child {
+    padding-right: 0px;
 }
 
 a {
@@ -80,8 +87,4 @@ a {
     opacity: 0.6;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 550;
-}
-
-#categories > p {
-    opacity: 0.8;
 }
