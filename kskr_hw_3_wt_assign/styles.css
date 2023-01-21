@@ -1,29 +1,28 @@
 #hw_3 {
-    width: 762px;
+    width: 500px;
     margin: auto;
 }
 
 #header {
-    padding-top: 30px;
-    width: 762px;
+    padding-top: 16px;
+    width: 500px;
     margin: auto;
 }
 
 h1{
-    font-size: 56px;
+    font-size: 36px;
     margin: 0px;
-    padding: 18px;
-    padding-bottom: 8px;
+    padding: 12px;
+    padding-bottom: 0px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
 }
 
 #container-head {
-    border: 2px solid black;
+    border: 1.5px solid black;
     text-align: center;
-    /* margin-left: 408px; */
-    width: 665px;
-    padding-bottom: 20px;
+    width: 414px;
+    padding-bottom: 10px;
     margin: auto;
 }
 
@@ -33,53 +32,52 @@ a:last-child {
 
 #categories a {
     display: inline-block;
-    padding-right: 20px;
+    padding-right: 13px;
     font-style: italic;
-    font-size: 13px;
+    font-size: 8px;
     text-decoration: none;
-    color: black;
-    opacity: 0.6;
+    color: gray;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 550;
+    font-weight: 400;
 }
 
 #content-body {
-    width: 762px;
+    width: 472px;
+    margin: auto;
 }
 
 #content-body > img {
-    margin-right: 4px;
-    margin-bottom: 4px;
     object-fit: cover;
 }
 
 #nature-title {
-    margin-top: 50px;
-    margin-bottom: 8px;
-    font-size: 28px;
+    margin: auto;
+    margin-top: 28px;
+    margin-bottom: 6px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 550;
-    width: 762px;
+    font-weight: 500;
+    width: 472px;
     text-align: left;
 }
 
-#footer {
-    margin-top: 24px;
-    margin-bottom: 28px;
-    text-align: center;
-    width: 762px;
-}
-
 #trademarks {
-    margin-top: 28px;
+    margin-top: 18px;
     text-align: center;
-    font-size: 10px;
-    width: 762px;
+    font-size: 6px;
+    width: 496px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#footer {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 496px;
+}
+
 #footer > a {
-    padding-right: 16px;
+    padding-right: 8px;
 }
 
 #footer > a:last-child {
