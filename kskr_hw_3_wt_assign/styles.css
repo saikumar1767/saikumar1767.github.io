@@ -1,29 +1,30 @@
 #hw_3 {
-    width: 500px;
+    width: 762px;
     margin: auto;
 }
 
 #header {
-    padding-top: 16px;
-    width: 500px;
+    padding-top: 40px;
+    width: 585px;
     margin: auto;
 }
 
 h1{
-    font-size: 36px;
+    font-size: 48px;
     margin: 0px;
-    padding: 12px;
-    padding-bottom: 0px;
+    padding: 16px;
+    padding-bottom: 4px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
 }
 
 #container-head {
-    border: 1.5px solid black;
+    border: 2px solid black;
     text-align: center;
-    width: 414px;
+    width: 585px;
     padding-bottom: 10px;
     margin: auto;
+    height: 100px;
 }
 
 a:last-child {
@@ -32,9 +33,9 @@ a:last-child {
 
 #categories a {
     display: inline-block;
-    padding-right: 13px;
+    padding-right: 16px;
     font-style: italic;
-    font-size: 8px;
+    font-size: 12px;
     text-decoration: none;
     color: gray;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -42,42 +43,43 @@ a:last-child {
 }
 
 #content-body {
-    width: 472px;
+    width: 666px;
     margin: auto;
 }
 
 #content-body > img {
+    margin: 1.5px;
     object-fit: cover;
 }
 
 #nature-title {
     margin: auto;
-    margin-top: 28px;
+    margin-top: 50px;
     margin-bottom: 6px;
-    font-size: 18px;
+    font-size: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
-    width: 472px;
+    width: 666px;
     text-align: left;
 }
 
 #trademarks {
-    margin-top: 18px;
+    margin-top: 24px;
     text-align: center;
-    font-size: 6px;
-    width: 496px;
+    font-size: 8px;
+    width: 762px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #footer {
-    margin-top: 12px;
-    margin-bottom: 10px;
+    margin-top: 24px;
+    margin-bottom: 18px;
     text-align: center;
-    width: 496px;
+    width: 762px;
 }
 
 #footer > a {
-    padding-right: 8px;
+    padding-right: 12px;
 }
 
 #footer > a:last-child {
