@@ -50,6 +50,7 @@ a:last-child {
 #content-body > img {
     margin: 1.5px;
     object-fit: cover;
+    white-space: nowrap;
 }
 
 #nature-title {
