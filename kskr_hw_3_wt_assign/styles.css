@@ -1,10 +1,10 @@
 #hw_3 {
-    width: 762px;
+    width: 670px;
     margin: auto;
 }
 
 #header {
-    padding-top: 40px;
+    padding-top: 36px;
     width: 585px;
     margin: auto;
 }
@@ -68,15 +68,15 @@ a:last-child {
     margin-top: 24px;
     text-align: center;
     font-size: 8px;
-    width: 762px;
+    width: 670px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #footer {
-    margin-top: 24px;
-    margin-bottom: 18px;
+    margin-top: 20px;
+    margin-bottom: 24px;
     text-align: center;
-    width: 762px;
+    width: 670px;
 }
 
 #footer > a {
