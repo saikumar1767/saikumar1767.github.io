@@ -44,8 +44,11 @@ a:last-child {
 }
 
 #content-body {
+    display: inline-block;
     width: 666px;
     margin: auto;
+    white-space: nowrap;
+    height: 332px;
 }
 
 #content-body > img {
