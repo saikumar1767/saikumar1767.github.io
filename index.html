@@ -1,122 +1,418 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Pair_Program</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sai Kumar Portfolio</title>
+    <meta name="description" content="Risk Developer and Full Stack Engineer Portfolio" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("T_e__wGnTcvDBY_aN");
+      })();
+    </script>
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/jpeg/pic.jpeg"
+              alt="Sai Kumar Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Sai Kumar K</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Pair_Program</div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <script>
+    </header>
+    <section class="home-hero">
+      <div class="home-hero__content">
+        <h1 class="heading-primary">Hey, I am Sai Kumar</h1>
+        <div class="home-hero__info">
+          <p class="text-primary">
+            I architect intelligent systems that scale, endure, and make a difference.
+            Driven by purpose, I build end-to-end products that combine cutting-edge tech with real-world impact—transforming complexity into clarity across both social and technical landscapes.          </p>
+        </div>
+        <div class="home-hero__cta">
+          <a href="./index.html#projects" class="btn btn--bg">Projects</a>
+        </div>
+      </div>
+      <div class="home-hero__socials">
+        <div class="home-hero__social">
+          <a href="https://www.linkedin.com/in/saikumarkasarla" class="home-hero__social-icon-link">
+            <img
+              src="./assets/svg/linkedin-dark.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a href="https://github.com/saikumar1767" class="home-hero__social-icon-link">
+            <img
+              src="./assets/svg/github-dark.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+        <div class="home-hero__social">
+          <a
+            href="https://www.instagram.com/skr_1767"
+            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
+          >
+            <img
+              src="./assets/svg/instagram-dark.svg"
+              alt="icon"
+              class="home-hero__social-icon"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="home-hero__mouse-scroll-cont">
+        <div class="mouse"></div>
+      </div>
+    </section>
+    <section id="about" class="about sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main">About Me</span>
+          <span class="heading-sec__sub">
+            A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.
+          </span>
+        </h2>
+        <div class="about__content">
+          <div class="about__content-main">
+            <h3 class="about__content-title">Get to know me!</h3>
+            <div class="about__content-details">
+              <p class="about__content-details-para">
+                Hey! It's
+                <strong>Sai Kumar</strong>
+                and I'm a <strong> Software Developer </strong> located in
+                New York. I specialize in building <strong>scalable</strong>, <strong>distributed</strong> and <strong>intelligent data-driven</strong> products. I’ve collaborated with startups and enterprise teams, delivering high-impact solutions across finance, recruiting, and enterprise software.
+              </p>
+              <p class="about__content-details-para">
+                My work spans from high-performance risk platforms and real-time data pipelines to integrating modern machine learning technologies, including <strong>large language models (LLMs)</strong>, predictive analytics, and automation frameworks.
+                Let’s connect if you’re working on something <strong>ambitious</strong>—I’d love to hear about it.
+              </p>
+            </div>
+            <a href="./index.html#contact" class="btn btn--med btn--theme dynamicBgClr"
+              >Contact</a
+            >
+          </div>
+          <div class="about__content-skills">
+            <h3 class="about__content-title">My Skills</h3>
+            <div class="skills">
+              <div class="skills__skill">Java</div>
+              <div class="skills__skill">Python</div>
+              <div class="skills__skill">Apache Kafka</div>
+              <div class="skills__skill">TensorFlow</div>
+              <div class="skills__skill">Keras</div>
+              <div class="skills__skill">Spring Boot</div>
+              <div class="skills__skill">React</div>
+              <div class="skills__skill">TypeScript</div>
+              <div class="skills__skill">AWS</div>
+              <div class="skills__skill">Kubernetes</div>
+              <div class="skills__skill">.NET</div>
+              <div class="skills__skill">Docker</div>
+              <div class="skills__skill">MongoDB</div>
+              <div class="skills__skill">SQL</div>
+              <div class="skills__skill">Jenkins</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+            From dynamic web applications to ML-based classification systems, each project reflects hands-on problem solving, creativity, and a passion for purposeful building.
+          </span>
+        </h2>
 
-      var container = document.querySelector("#unity-container");
-      var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/Renewable_energy_app.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Renewable Energy Analytics</h3>
+              <p class="projects__row-content-desc">
+                This project aims to develop a web application that visualizes energy consumption and generation data, providing users with insights into renewable energy usage and trends.              </p>
+              <a
+                href="https://github.com/saikumar1767/RenewableEnergyAnalytics"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/Fake_news_prediction.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Fake News Detection System</h3>
+              <p class="projects__row-content-desc">
+                Developed multiple models viz., logistic regression, SVM, Naive Bayes, and Perceptron models to predict fake news.
+                Evaluated four models and, with early stopping based on validation metrics implementation, substantially elevated and
+                achieved a fake news prediction model with 90% accuracy with logistic regression.
+              </p>
+              <a
+                href=""
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >Case Study</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/NHL_Leaderboard_Stats.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">NHL Leaderboard Stats</h3>
+              <p class="projects__row-content-desc">
+                This project presents NHL team statistics using interactive visualizations powered by Highcharts. 
+                It features a sortable, filterable, and paginated summary table listing each team’s position, wins, losses, ties, and points. Users can explore in-depth statistics by clicking on a team, leading to a detailed view with dynamic charts (Pie, Line, Bar, Column, Area, Scatter).
+              </p>
+              <a
+                href="https://github.com/saikumar1767/NHL-Leaderboard-Stats"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/Event_Search_App.jpg"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Event Search Application</h3>
+              <p class="projects__row-content-desc">
+                Engineered a responsive web and mobile application enabling users to perform Restful API-based searches for ticketing
+                information, displaying fetched JSON results in card and tabular formats with UI manipulation, and deployed the
+                application on Google Cloud Platform (GCP).
+              </p>
+              <a
+                href="https://github.com/saikumar1767"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View more</a
+              >
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img
+                src="./assets/jpeg/Slot-booking.png"
+                alt="Software Screenshot"
+                class="projects__row-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">Slot Booking Application</h3>
+              <p class="projects__row-content-desc">
+                The Slot-Booking Project theme is to make appointment booking between people a lot easier which avoids the usual process of exchanging emails between people till they find a convenient time.
+              </p>
+              <a
+                href="https://github.com/saikumar1767/Slot-Booking"
+                class="btn btn--med btn--theme dynamicBgClr"
+                target="_blank"
+                >View more</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Let’s make the internet a little cooler—together.
+            Got an idea, a bug, or just wanna say hi? Drop your message below and I’ll hit you back faster than a CI/CD pipeline on a good day.
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form id="contact-form" class="contact__form">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input
+                required
+                placeholder="Enter Your Name"
+                type="text"
+                class="contact__form-input"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input
+                required
+                placeholder="Enter Your Email"
+                type="email"
+                class="contact__form-input"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea
+                required
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Enter Your Message"
+                name="message"
+                id="message"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/saikumarkasarla">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/saikumar1767">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/skr_1767">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Sai Kumar K</h4>
+            <p class="main-footer__short-desc">
+              Engineer at work, debugger on the go, and a constant therapist for unruly code.
+            </p>
+          </div>
+        </div>
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
-      }
+        <div class="main-footer__lower">
+          &copy; Copyright 2025. Made by
+          <a rel="noreferrer" target="_blank" href="/"
+            >Sai Kumar K</a
+          >
+        </div>
+      </div>
+    </footer>
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/Stiltscape.loader.js";
-      var config = {
-        dataUrl: buildUrl + "/Stiltscape.data",
-        frameworkUrl: buildUrl + "/Stiltscape.framework.js",
-        codeUrl: buildUrl + "/Stiltscape.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Pair_Program",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
-      };
-
-      // By default, Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
-
-        // To lower canvas resolution on mobile devices to gain some
-        // performance, uncomment the following line:
-        // config.devicePixelRatio = 1;
-
-
-      } else {
-        // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
-      }
-
-      loadingBar.style.display = "block";
-
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-              }).then((unityInstance) => {
-                loadingBar.style.display = "none";
-                fullscreenButton.onclick = () => {
-                  unityInstance.SetFullscreen(1);
-                };
-              }).catch((message) => {
-                alert(message);
-              });
-            };
-
-      document.body.appendChild(script);
-
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>
