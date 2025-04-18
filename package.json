@@ -1,20 +1,26 @@
 {
-  "name": "dopefolio",
+  "name": "portfolio-react-vite",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "compile:scss": "node-sass sass/main.scss css/style.css -w",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.css",
-    "compress:css": "node-sass css/style.css css/style.css --output-style compressed",
-    "build": "npm-run-all prefix:css compress:css"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "author": "",
-  "license": "GPL-3.0",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^7.0.2",
+    "emailjs-com": "^3.2.0",
+    "notistack": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "node-sass": "^9.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^8.3.1"
+    "@tailwindcss/postcss": "^4.1.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4",
+    "vite": "^4.0.0"
   }
 }
