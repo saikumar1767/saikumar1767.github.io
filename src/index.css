@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-#notistack-snackbar {
-    font-size: 14px;
-}
