@@ -28,6 +28,9 @@ const AboutSection = () => (
             <div className="skills__skill">Java</div>
             <div className="skills__skill">Python</div>
             <div className="skills__skill">Apache Kafka</div>
+            <div className="skills__skill">Apache Spark</div>
+            <div className="skills__skill">Rabbit MQ</div>
+            <div className="skills__skill">Redis Cache</div>
             <div className="skills__skill">TensorFlow</div>
             <div className="skills__skill">Keras</div>
             <div className="skills__skill">Spring Boot</div>
@@ -36,6 +39,7 @@ const AboutSection = () => (
             <div className="skills__skill">AWS</div>
             <div className="skills__skill">Kubernetes</div>
             <div className="skills__skill">.NET</div>
+            <div className="skills__skill">Git</div>
             <div className="skills__skill">Docker</div>
             <div className="skills__skill">MongoDB</div>
             <div className="skills__skill">SQL</div>
