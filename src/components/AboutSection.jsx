@@ -1,51 +1,83 @@
 import React from "react";
+import { FiArrowUpRight, FiCpu, FiLayers, FiTrendingUp } from "react-icons/fi";
+import { profile, skills } from "../data/portfolioData";
+
+const focusAreas = [
+  {
+    icon: FiCpu,
+    title: "Applied AI Engineering",
+    text: "I am strongest where AI meets software engineering: workflow automation, LLM-enabled product features, backend services, and production constraints.",
+  },
+  {
+    icon: FiLayers,
+    title: "Across the Stack",
+    text: "I can move from React interfaces and internal tools to Python and Java services, SQL tuning, and cloud-backed delivery.",
+  },
+  {
+    icon: FiTrendingUp,
+    title: "Measured Outcomes",
+    text: "The work I highlight most is the work that changed operating speed, reduced manual effort, improved stability, or made product teams faster.",
+  },
+];
 
 const AboutSection = () => (
-  <section id="about" className="about sec-pad">
+  <section id="about" className="about-section section-shell" data-reveal>
     <div className="main-container">
-      <h2 className="heading heading-sec heading-sec__mb-med">
-        <span className="heading-sec__main">About Me</span>
-        <span className="heading-sec__sub">
-          A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.
-        </span>
-      </h2>
-      <div className="about__content">
-        <div className="about__content-main">
-          <h3 className="about__content-title">Get to know me!</h3>
-          <div className="about__content-details">
-            <p className="about__content-details-para">
-              Hey! It's <strong>Sai Kumar</strong> and I'm a <strong> Software Developer </strong> located in New York. I specialize in building <strong>scalable</strong>, <strong>distributed</strong> and <strong>intelligent data-driven</strong> products. I’ve collaborated with startups and enterprise teams, delivering high-impact solutions across finance, recruiting, and enterprise software.
-            </p>
-            <p className="about__content-details-para">
-              My work spans from high-performance risk platforms and real-time data pipelines to integrating modern machine learning technologies, including <strong>large language models (LLMs)</strong>, predictive analytics, and automation frameworks. Let’s connect if you’re working on something <strong>ambitious</strong>—I’d love to hear about it.
-            </p>
-          </div>
-          <a href="./index.html#contact" className="btn btn--med btn--theme dynamicBgClr">Contact</a>
+      <div className="section-heading">
+        <span className="section-heading__eyebrow">About</span>
+        <h2 className="section-heading__title">
+          A full stack engineer with a strong fit for applied AI teams.
+        </h2>
+        <p className="section-heading__body">
+          I am {profile.name}, based in New York City. My background combines
+          backend engineering, product delivery, analytics workflows, observability,
+          and AI-enabled feature work, which makes me a strong fit for teams building
+          real products around modern AI capabilities.
+        </p>
+      </div>
+
+      <div className="about-grid">
+        <article className="glass-card about-story">
+          <p className="about-story__lead">
+            My recent work has involved turning noisy or data-heavy workflows into
+            faster, clearer systems through automation, APIs, validation, and better
+            user-facing product flows.
+          </p>
+          <p className="about-story__body">
+            That translates well to AI organizations that need engineers who can
+            do more than call a model API: prototype quickly, integrate across the
+            stack, productionize safely, and keep systems reliable once they are live.
+          </p>
+          <a href="#experience" className="inline-link">
+            Explore the experience timeline
+            <FiArrowUpRight />
+          </a>
+        </article>
+
+        <div className="about-focus">
+          {focusAreas.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article key={item.title} className="glass-card focus-card">
+                <div className="focus-card__icon">
+                  <Icon />
+                </div>
+                <div className="focus-card__content">
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              </article>
+            );
+          })}
         </div>
-        <div className="about__content-skills">
-          <h3 className="about__content-title">My Skills</h3>
-          <div className="skills">
-            <div className="skills__skill">Java</div>
-            <div className="skills__skill">Python</div>
-            <div className="skills__skill">Apache Kafka</div>
-            <div className="skills__skill">Apache Spark</div>
-            <div className="skills__skill">Rabbit MQ</div>
-            <div className="skills__skill">Redis Cache</div>
-            <div className="skills__skill">TensorFlow</div>
-            <div className="skills__skill">Keras</div>
-            <div className="skills__skill">Spring Boot</div>
-            <div className="skills__skill">React</div>
-            <div className="skills__skill">TypeScript</div>
-            <div className="skills__skill">AWS</div>
-            <div className="skills__skill">Kubernetes</div>
-            <div className="skills__skill">.NET</div>
-            <div className="skills__skill">Git</div>
-            <div className="skills__skill">Docker</div>
-            <div className="skills__skill">MongoDB</div>
-            <div className="skills__skill">SQL</div>
-            <div className="skills__skill">Jenkins</div>
-          </div>
-        </div>
+      </div>
+
+      <div className="skills-ribbon">
+        {skills.map((skill) => (
+          <span key={skill} className="skills-ribbon__item">
+            {skill}
+          </span>
+        ))}
       </div>
     </div>
   </section>

@@ -1,95 +1,176 @@
 import React, { useRef } from "react";
+import { FiFileText, FiGithub, FiLinkedin, FiMail, FiSend } from "react-icons/fi";
 import emailjs from "emailjs-com";
 import { useSnackbar } from "notistack";
+import { profile } from "../data/portfolioData";
 
 const ContactSection = () => {
-  const formRef = useRef();
+  const formRef = useRef(null);
   const { enqueueSnackbar } = useSnackbar();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-    
-    const name = e.currentTarget[0].value;
-    const email = e.currentTarget[1].value;
-    const message = e.currentTarget[2].value;
+  const sendEmail = (event) => {
+    event.preventDefault();
+
+    const form = formRef.current;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
     if (!name || !email || !message) {
-      enqueueSnackbar("Please fill all the fields!", { variant: "error" });
+      enqueueSnackbar("Please fill out every field before sending.", {
+        variant: "error",
+      });
       return;
     }
-    else if (!email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
-      enqueueSnackbar("Please enter a valid email!", { variant: "error" });
+
+    if (!email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+      enqueueSnackbar("Please enter a valid email address.", {
+        variant: "error",
+      });
       return;
     }
-    else if (message.length < 5 || message.length > 1000) {
-      enqueueSnackbar("Message should be between 5 and 1000 characters long!", { variant: "error" });
+
+    if (message.length < 10 || message.length > 1000) {
+      enqueueSnackbar("Your message should be between 10 and 1000 characters.", {
+        variant: "error",
+      });
       return;
     }
 
     emailjs
-      .sendForm('service_7b5a4tm', 'template_qx6wzdc', formRef.current, 'T_e__wGnTcvDBY_aN')
+      .sendForm(
+        "service_7b5a4tm",
+        "template_qx6wzdc",
+        form,
+        "T_e__wGnTcvDBY_aN"
+      )
       .then(() => {
-        enqueueSnackbar("Message sent successfully!", { variant: "success" });
-        formRef.current.reset();
+        enqueueSnackbar("Message sent successfully.", { variant: "success" });
+        form.reset();
       })
       .catch((error) => {
-        console.error("FAILED...", error);
-        enqueueSnackbar("Failed to send message. Please try again later!", { variant: "error" });
+        console.error("EmailJS send failed:", error);
+
+        const errorText = String(error?.text || "");
+        const details = [error?.status, errorText].filter(Boolean).join(" - ");
+
+        let message = details
+          ? `Message failed to send. ${details}`
+          : "Message failed to send. Please try again later.";
+
+        if (errorText.includes("Invalid grant")) {
+          message =
+            "Email service needs reconnecting in EmailJS. Your Gmail authorization appears to have expired.";
+        }
+
+        enqueueSnackbar(message, {
+          variant: "error",
+        });
       });
   };
 
   return (
-    <section id="contact" className="contact sec-pad dynamicBg">
+    <section id="contact" className="contact-section section-shell" data-reveal>
       <div className="main-container">
-        <h2 className="heading heading-sec heading-sec__mb-med">
-          <span className="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span className="heading-sec__sub heading-sec__sub--lt">
-            Let’s make the internet a little cooler together.
-            Got an idea, a bug, or just wanna say hi? Drop your message below and I’ll hit you back faster than a CI/CD pipeline on a good day.
-          </span>
-        </h2>
-        <div className="contact__form-container">
-          <form ref={formRef} onSubmit={sendEmail} id="contact-form" className="contact__form">
-            <div className="contact__form-field">
-              <label className="contact__form-label" htmlFor="name">Name</label>
+        <div className="contact-panel glass-card">
+          <div className="contact-panel__intro">
+            <span className="section-heading__eyebrow">Contact</span>
+            <h2 className="contact-panel__title">
+              Open to conversations with applied AI, AI product, and platform teams.
+            </h2>
+            <p className="contact-panel__body">
+              If you are hiring for an AI-facing software role, building internal
+              tooling around modern models, or need an engineer who can bridge product
+              and backend systems, I would be glad to connect.
+            </p>
+
+            <div className="contact-links">
+              <a
+                href="https://www.linkedin.com/in/saikumarkasarla"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-links__item"
+              >
+                <FiLinkedin />
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/saikumar1767"
+                target="_blank"
+                rel="noreferrer"
+                className="contact-links__item"
+              >
+                <FiGithub />
+                GitHub
+              </a>
+              <a href={`mailto:${profile.email}`} className="contact-links__item">
+                <FiMail />
+                {profile.email}
+              </a>
+              <a
+                href={profile.resumeHref}
+                target="_blank"
+                rel="noreferrer"
+                className="contact-links__item"
+              >
+                <FiFileText />
+                Resume
+              </a>
+            </div>
+          </div>
+
+          <form
+            id="contact-form"
+            ref={formRef}
+            onSubmit={sendEmail}
+            className="contact-form"
+          >
+            <label className="field-group" htmlFor="name">
+              <span>Name</span>
               <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                className="contact__form-input"
-                name="name"
                 id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                className="field-input"
+                required
               />
-            </div>
-            <div className="contact__form-field">
-              <label className="contact__form-label" htmlFor="email">Email</label>
+            </label>
+
+            <label className="field-group" htmlFor="email">
+              <span>Email</span>
               <input
-                required
-                placeholder="Enter Your Email"
-                type="email"
-                className="contact__form-input"
-                name="email"
                 id="email"
-              />
-            </div>
-            <div className="contact__form-field">
-              <label className="contact__form-label" htmlFor="message">Message</label>
-              <textarea
+                name="email"
+                type="email"
+                placeholder="name@example.com"
+                className="field-input"
                 required
-                cols="30"
-                rows="10"
-                className="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
+              />
+            </label>
+
+            <label className="field-group" htmlFor="message">
+              <span>Message</span>
+              <textarea
                 id="message"
-              ></textarea>
-            </div>
-            <button type="submit" className="btn btn--theme contact__btn">
-              Submit
+                name="message"
+                rows="6"
+                placeholder="Tell me about the team, role, or AI product."
+                className="field-input field-input--textarea"
+                required
+              />
+            </label>
+
+            <button type="submit" className="button button--primary button--full">
+              Send message
+              <FiSend />
             </button>
           </form>
         </div>
       </div>
-    </section>);
+    </section>
+  );
 };
 
 export default ContactSection;

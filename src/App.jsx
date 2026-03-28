@@ -1,8 +1,7 @@
-// src/App.jsx
 import React, { useEffect } from "react";
-import "./css/style.css";
 import emailjs from "emailjs-com";
 import Layout from "./components/Layout";
+import "./css/style.css";
 
 const App = () => {
   useEffect(() => {

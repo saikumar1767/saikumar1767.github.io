@@ -1,41 +1,76 @@
 import React from "react";
-import linkedinDark from "../assets/svg/linkedin-dark.svg";
-import githubDark from "../assets/svg/github-dark.svg";
-import instagramDark from "../assets/svg/instagram-dark.svg";
+import { FiArrowDownRight, FiArrowUpRight, FiMapPin } from "react-icons/fi";
+import { profile } from "../data/portfolioData";
 
 const HeroSection = () => (
-  <section className="home-hero">
-    <div className="home-hero__content">
-      <h1 className="heading-primary">Hey, I am Sai Kumar</h1>
-      <div className="home-hero__info">
-        <p className="text-primary">
-          I architect intelligent systems that scale, endure, and make a difference.
-          Driven by purpose, I build end-to-end products that combine cutting-edge tech with real-world impact—transforming complexity into clarity across both social and technical landscapes.
+  <section className="hero-section" id="top" data-reveal>
+    <div className="hero-section__glow hero-section__glow--one" />
+    <div className="hero-section__glow hero-section__glow--two" />
+
+    <div className="main-container hero-section__layout">
+      <div className="hero-copy">
+        <div className="eyebrow">
+          <span className="eyebrow__dot" />
+          {profile.name}
+        </div>
+        <p className="hero-kicker">
+          Applied AI products, low-latency APIs, data systems, and full-stack delivery.
         </p>
+        <h1 className="hero-title">
+          I turn AI-enabled ideas into production-ready software systems.
+        </h1>
+        <p className="hero-description">
+          {profile.intro} {profile.summary}
+        </p>
+
+        <div className="hero-actions">
+          <a
+            href={profile.resumeHref}
+            target="_blank"
+            rel="noreferrer"
+            className="button button--primary"
+          >
+            View resume
+            <FiArrowUpRight />
+          </a>
+          <a href="#ai-fit" className="button button--ghost">
+            Why AI teams
+            <FiArrowDownRight />
+          </a>
+        </div>
+
+        <div className="hero-meta">
+          <div className="hero-meta__location">
+            <FiMapPin />
+            <span>{profile.location}</span>
+          </div>
+          <p className="hero-meta__availability">{profile.availability}</p>
+        </div>
       </div>
-      <div className="home-hero__cta">
-        <a href="./index.html#projects" className="btn btn--bg">Projects</a>
+
+      <div className="hero-panel">
+        <div className="hero-panel__header">
+          <span className="hero-panel__label">At a glance</span>
+          <span className="hero-panel__title">{profile.title}</span>
+        </div>
+
+        <div className="hero-stats-grid">
+          {profile.stats.map((stat) => (
+            <article key={stat.label} className="hero-stat-card">
+              <span className="hero-stat-card__value">{stat.value}</span>
+              <p className="hero-stat-card__label">{stat.label}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="hero-spotlight">
+          {profile.spotlight.map((item) => (
+            <span key={item} className="pill-chip">
+              {item}
+            </span>
+          ))}
+        </div>
       </div>
-    </div>
-    <div className="home-hero__socials">
-      <div className="home-hero__social">
-        <a href="https://www.linkedin.com/in/saikumarkasarla" className="home-hero__social-icon-link">
-          <img src={linkedinDark} alt="icon" className="home-hero__social-icon" />
-        </a>
-      </div>
-      <div className="home-hero__social">
-        <a href="https://github.com/saikumar1767" className="home-hero__social-icon-link">
-          <img src={githubDark} alt="icon" className="home-hero__social-icon" />
-        </a>
-      </div>
-      <div className="home-hero__social">
-        <a href="https://www.instagram.com/skr_1767" className="home-hero__social-icon-link home-hero__social-icon-link--bd-none">
-          <img src={instagramDark} alt="icon" className="home-hero__social-icon" />
-        </a>
-      </div>
-    </div>
-    <div className="home-hero__mouse-scroll-cont">
-      <div className="mouse"></div>
     </div>
   </section>
 );
