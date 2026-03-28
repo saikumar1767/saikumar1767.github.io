@@ -6,19 +6,19 @@ import slotBooking from "../assets/jpeg/Slot-booking.png";
 
 export const profile = {
   name: "Sai Kumar Reddy Kasarla",
-  title: "AI Software Engineer",
+  title: "Applied AI and Full-Stack Engineer",
   location: "New York, NY",
   email: "saikumarreddy1767@gmail.com",
   phone: "+1 (213) 373-0662",
   resumeHref: "/Sai-Kumar-Reddy-Kasarla-Resume.pdf",
   intro:
-    "I am a full stack engineer building AI-enabled workflows, low-latency APIs, and data-intensive products across finance, SaaS, and enterprise software.",
+    "I am an AI software engineer with strong full-stack experience building AI-enabled workflows, low-latency APIs, and data-intensive products across finance, SaaS, and enterprise software.",
   summary:
     "My background spans Java, React, Python, SQL, distributed systems, observability, and LLM-integrated product work, with a focus on turning complex requirements into reliable software that teams can ship and trust.",
   availability:
-    "Currently based in New York City and targeting applied AI, AI product engineering, and AI-platform-oriented software roles across United States (Open to relocation).",
+    "Currently based in New York City and open to applied AI, AI product engineering, and AI-platform-oriented software roles across the United States.",
   stats: [
-    { value: "4+", label: "Years shipping production software" },
+    { value: "6+", label: "Years shipping production software" },
     { value: "40%", label: "Manual triage reduced in risk workflows" },
     { value: "35%", label: "Faster reporting turnaround via automation" },
     { value: "100ms", label: "Latency target for critical APIs" },
@@ -235,7 +235,7 @@ export const projects = [
   {
     title: "Fake News Detection System",
     category: "Applied NLP",
-    year: "ML + Evaluation",
+    year: "",
     description:
       "Built and evaluated an NLP classification pipeline across logistic regression, SVM, Naive Bayes, and Perceptron models, reaching 90% accuracy with logistic regression.",
     image: fakeNewsPrediction,
@@ -255,7 +255,7 @@ export const projects = [
   {
     title: "NHL Leaderboard Stats",
     category: "Interactive Dashboard",
-    year: "Highcharts + Data UI",
+    year: "",
     description:
       "Built an interactive stats dashboard for NHL team data with sortable tables, filtering, pagination, and richer chart-based exploration for team-level performance.",
     image: nhlLeaderboardStats,
@@ -265,7 +265,7 @@ export const projects = [
   {
     title: "Slot Booking Application",
     category: "Scheduling Product",
-    year: "Full Stack",
+    year: "",
     description:
       "Built a scheduling workflow that makes appointment booking easier by reducing the usual back-and-forth email coordination needed to find a suitable time.",
     image: slotBooking,

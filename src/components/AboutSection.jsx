@@ -26,7 +26,7 @@ const AboutSection = () => (
       <div className="section-heading">
         <span className="section-heading__eyebrow">About</span>
         <h2 className="section-heading__title">
-          A full stack engineer with a strong fit for applied AI teams.
+          An AI software engineer with strong full-stack foundations.
         </h2>
         <p className="section-heading__body">
           I am {profile.name}, based in New York City. My background combines

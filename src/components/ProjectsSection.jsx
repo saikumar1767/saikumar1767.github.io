@@ -4,6 +4,8 @@ import { projects } from "../data/portfolioData";
 
 const ProjectsSection = () => {
   const [featuredProject, ...projectCards] = projects;
+  const getProjectKicker = (project) =>
+    [project.category, project.year].filter(Boolean).join(" / ");
 
   return (
     <section id="projects" className="projects-section section-shell" data-reveal>
@@ -12,13 +14,12 @@ const ProjectsSection = () => {
           <div>
             <span className="section-heading__eyebrow">Selected work</span>
             <h2 className="section-heading__title">
-              Projects from the portfolio and original repo history, restored to a fuller set.
+              Projects spanning applied AI, analytics, and product engineering.
             </h2>
           </div>
           <p className="section-heading__body">
-            I brought this section back closer to the original repository shape so it
-            reflects the broader project history you had in the portfolio before the
-            recent narrowing to only a few AI-oriented examples.
+            These projects reflect the breadth of my portfolio across machine learning,
+            data visualization, API-driven applications, and full-stack product design.
           </p>
         </div>
 
@@ -27,9 +28,7 @@ const ProjectsSection = () => {
             <img src={featuredProject.image} alt={featuredProject.title} />
           </div>
           <div className="project-feature__content">
-            <span className="project-kicker">
-              {featuredProject.category} � {featuredProject.year}
-            </span>
+            <span className="project-kicker">{getProjectKicker(featuredProject)}</span>
             <h3>{featuredProject.title}</h3>
             <p>{featuredProject.description}</p>
             <div className="project-tags">
@@ -39,12 +38,11 @@ const ProjectsSection = () => {
                 </span>
               ))}
             </div>
-            <div style={{ padding: "6px" }}/>
             <a
               href={featuredProject.href}
               target="_blank"
               rel="noreferrer"
-              className="button button--primary button--compact"
+              className="project-feature__link button button--primary button--compact"
             >
               View project
               <FiArrowUpRight />
@@ -60,9 +58,7 @@ const ProjectsSection = () => {
               </div>
               <div className="project-card__content">
                 <div className="project-card__copy">
-                  <span className="project-kicker">
-                    {project.category} � {project.year}
-                  </span>
+                  <span className="project-kicker">{getProjectKicker(project)}</span>
                   <h3>{project.title}</h3>
                   <p>{project.description}</p>
                   <div className="project-tags">
@@ -92,4 +88,3 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
-
