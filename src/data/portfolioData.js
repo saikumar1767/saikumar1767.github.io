@@ -18,7 +18,7 @@ export const profile = {
   availability:
     "Currently based in New York City and open to applied AI, AI product engineering, and AI-platform-oriented software roles across the United States.",
   stats: [
-    { value: "6+", label: "Years shipping production software" },
+    { value: "4+", label: "Years shipping production software" },
     { value: "40%", label: "Manual triage reduced in risk workflows" },
     { value: "35%", label: "Faster reporting turnaround via automation" },
     { value: "100ms", label: "Latency target for critical APIs" },
