@@ -13,6 +13,11 @@ const Layout = () => {
   useEffect(() => {
     const revealTargets = document.querySelectorAll("[data-reveal]");
 
+    if (!("IntersectionObserver" in window)) {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -23,8 +28,8 @@ const Layout = () => {
         });
       },
       {
-        threshold: 0.18,
-        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.05,
+        rootMargin: "0px 0px -5% 0px",
       }
     );
 
